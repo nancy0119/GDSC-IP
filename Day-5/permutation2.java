@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class permutation2 {
 
   public static void permutations(int cb, int tb, int[] items, int ssf, int ts, String asf){
     // write your code here

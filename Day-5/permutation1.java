@@ -1,8 +1,7 @@
-// Link - https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/permutation-i-official/ojquestion
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class permutation1 {
 
   public static void permutations(int[] boxes, int ci, int ti){
     // write your code here
@@ -28,5 +27,4 @@ public class Main {
     int ritems = Integer.parseInt(br.readLine());
     permutations(new int[nboxes], 1, ritems);
   }
-
 }

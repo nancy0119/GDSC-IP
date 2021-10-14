@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class combination2 {
 
   public static void combinations(int[] boxes, int ci, int ti, int lb){
     // write your code here
