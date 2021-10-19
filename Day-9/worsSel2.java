@@ -1,9 +1,8 @@
 // Link -  https://www.pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/recursion-and-backtracking/word-kselection-2-official/ojquestion
 
-import java.io.*;
 import java.util.*;
 
-public class wordSel2{
+public class worsSel2{
 
   public static void main(String[] args){
     Scanner s = new Scanner(System.in);
@@ -18,6 +17,7 @@ public class wordSel2{
         }
     }
     combination(ustr, 0, 0, k, "");
+    s.close();
   }
   public static void combination(String ustr, int idx, int iter, int k, String asf){
     if(iter == k){

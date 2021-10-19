@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 
-public class wordSel1 {
+public class wordSel3 {
 
   
   public static void main(String[] args) throws Exception {
