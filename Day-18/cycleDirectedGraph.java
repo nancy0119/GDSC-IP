@@ -1,9 +1,9 @@
 // Link - https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1#
+import java.util.*;
 class Solution {
     // Function to detect cycle in a directed graph.
     public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {
         // code here
-        boolean cycle = false;
         boolean visited[] = new boolean[V];
         boolean dfsVisited[] = new boolean [V];
         for(int i = 0 ; i < V; i++){
