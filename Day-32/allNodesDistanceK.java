@@ -46,13 +46,34 @@ public class allNodesDistanceK {
         ans.addAll(kDisDown(root.right, k - 1, exc));
         return ans;
     }
+    public int find(TreeNode root, TreeNode target, List<Integer> ans, int k){
+        if(root == null)return -1;
+        if(root == target){
+            ans.addAll(kDisDown(root, k, null));
+            return 1;
+        }
+        int findL = find(root.left, target, ans, k);
+        if(findL != -1){
+            ans.addAll(kDisDown(root, k - findL, root.left));
+            return findL + 1;
+        }
+        int findR = find(root.right, target, ans, k);
+        if(findR != -1){
+            ans.addAll(kDisDown(root, k - findR, root.right));
+            return findR + 1;
+        }
+        return -1;
+    }
       public static ArrayList<Integer> distanceK(TreeNode root, int target, int k) {
         ArrayList<Integer> ans = new ArrayList<>();
+        // M1
         ArrayList<TreeNode> path = nodeToRootPath(root, target);
         ans.addAll(kDisDown(path.get(0), k, null));
         for(int i = 1; i <= Math.min(k, path.size() - 1); i++){
             ans.addAll(kDisDown(path.get(i), k - i, path.get(i - 1)));
         }
+        // M2
+        find(root, target, ans, k);
         return ans;
       }
 
