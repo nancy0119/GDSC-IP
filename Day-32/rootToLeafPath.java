@@ -1,5 +1,14 @@
 // Link - https://practice.geeksforgeeks.org/problems/root-to-leaf-paths/1/
+import java.util.*;
 class rootToLeafPath{
+    public static class Node{
+        int data = 0;
+        Node left = null;
+        Node right = null;
+        Node(int data){
+            this.data = data;
+        }
+    }
     
     public ArrayList<ArrayList<Integer>> Paths(Node root){
         // Code here
